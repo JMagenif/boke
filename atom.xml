@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://jmagenif.github.io/"/>
+  <updated>2017-01-31T12:56:48.967Z</updated>
+  <id>http://jmagenif.github.io/</id>
+  
+  <author>
+    <name>Terminal</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows下免费用github+hexo搭建个人博客</title>
+    <link href="http://jmagenif.github.io/2017/01/31/hello/"/>
+    <id>http://jmagenif.github.io/2017/01/31/hello/</id>
+    <published>2017-01-31T14:37:23.000Z</published>
+    <updated>2017-01-31T12:56:48.967Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-windows7-系统"><a href="#1-windows7-系统" class="headerlink" title="1.windows7 系统"></a>1.windows7 系统</h1><h1 id="2-安装Git-官网下载"><a href="#2-安装Git-官网下载" class="headerlink" title="2.安装Git #  官网下载"></a>2.安装Git #  <a href="https://git-scm.com/download/" target="_blank" rel="external">官网下载</a></h1><h1 id="3-安装Node-js-官网下载"><a href="#3-安装Node-js-官网下载" class="headerlink" title="3.安装Node.js #  官网下载"></a>3.安装Node.js #  <a href="https://nodejs.org/en/" target="_blank" rel="external">官网下载</a></h1><a id="more"></a>
+<h1 id="4-验证软件是否正确安装"><a href="#4-验证软件是否正确安装" class="headerlink" title="4.验证软件是否正确安装"></a>4.验证软件是否正确安装</h1><p>打开cmd输入</p>
+<pre><code>git --version
+node -v
+npm -v
+</code></pre><p>正确显示版本 即安装成功</p>
+<h1 id="5-申请GitHub"><a href="#5-申请GitHub" class="headerlink" title="5.申请GitHub"></a>5.申请GitHub</h1><p>点击”New repository”，新建一个版本库</p>
+<p><img src="http://i.imgur.com/gGBjH3D.png" alt=""></p>
+<pre><code>起个名字
+</code></pre><p><img src="http://i.imgur.com/a0Dw1Es.png" alt=""></p>
+<pre><code>JMagenif是用户名 222.github.io是博客域名
+</code></pre><h1 id="6-安装Hexo"><a href="#6-安装Hexo" class="headerlink" title="6.安装Hexo"></a>6.安装Hexo</h1><pre><code>桌面新建个文件夹叫blog 右键点击
+</code></pre><p><img src="http://i.imgur.com/FsIow3z.png" alt=""></p>
+<pre><code>安装 输入npm install -g hexo 
+初始化 hexo init
+生成 hexo g 
+启动服务 hexo s
+打开浏览器访问 http://localhost:4000 即可看到内容
+本地博客搭建完成
+</code></pre><h1 id="7-本地博客上传至github"><a href="#7-本地博客上传至github" class="headerlink" title="7.本地博客上传至github"></a>7.本地博客上传至github</h1><pre><code>Ctrl+c终止服务 
+继续输入ssh-keygen -t rsa -C &quot;邮件地址&quot;
+</code></pre><p>邮件地址就是你的邮件地址</p>
+<p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到<br><strong>.ssh\id_rsa.pub</strong>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</p>
+<p><img src="http://i.imgur.com/eYFZyEV.png" alt=""><br>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
+<pre><code>测试是否成功    
+$ ssh -T git@github.com
+</code></pre><p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：</p>
+<p>Hi jmagenif! You’ve successfully authenticated, but GitHub does not provide shell access.<br>看到这个信息说明SSH已配置成功！</p>
+<p>此时你还需要配置：</p>
+<pre><code>$ git config --global user.name &quot;jmagenif&quot;// 你的github用户名，非昵称
+$ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱
+</code></pre><p>安装hexo git插件</p>
+<pre><code>$ npm install hexo-deployer-git --save
+</code></pre><p>配置信息 打开blog/_config.yml文件，进行配置 (编辑器我用的Sublime_Text或者markdownpad2也还行)<br><img src="http://i.imgur.com/NhloNpC.png" alt=""></p>
+<p>找到</p>
+<pre><code>deploy:
+type:
+</code></pre><p>改为</p>
+<pre><code>deploy:
+  type: git
+  repository: git@github.com:jmagenif/222.github.io.git
+ branch: master
+</code></pre><p> 发布更新博客</p>
+<pre><code>$ hexo d -g
+</code></pre><p>发布时需要输入github的帐号和密码，输入密码时是看不到自己输入的内容的 </p>
+<p>到这步基本就完了,打开222.github.io就可以看到网站了</p>
+<h2 id="剩下的绑定自己的域名-优化博客主题-加入一些第三方服务-这个就不说了"><a href="#剩下的绑定自己的域名-优化博客主题-加入一些第三方服务-这个就不说了" class="headerlink" title="剩下的绑定自己的域名,优化博客主题,加入一些第三方服务,这个就不说了"></a>剩下的绑定自己的域名,优化博客主题,加入一些第三方服务,这个就不说了</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-windows7-系统&quot;&gt;&lt;a href=&quot;#1-windows7-系统&quot; class=&quot;headerlink&quot; title=&quot;1.windows7 系统&quot;&gt;&lt;/a&gt;1.windows7 系统&lt;/h1&gt;&lt;h1 id=&quot;2-安装Git-官网下载&quot;&gt;&lt;a href=&quot;#2-安装Git-官网下载&quot; class=&quot;headerlink&quot; title=&quot;2.安装Git #  官网下载&quot;&gt;&lt;/a&gt;2.安装Git #  &lt;a href=&quot;https://git-scm.com/download/&quot;&gt;官网下载&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;3-安装Node-js-官网下载&quot;&gt;&lt;a href=&quot;#3-安装Node-js-官网下载&quot; class=&quot;headerlink&quot; title=&quot;3.安装Node.js #  官网下载&quot;&gt;&lt;/a&gt;3.安装Node.js #  &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;官网下载&lt;/a&gt;&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="http://jmagenif.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+</feed>
