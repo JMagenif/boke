@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://jmagenif.github.io/2017/02/01/hexo2/</loc>
+    <lastmod>2017-02-01T08:06:11.768Z</lastmod>
+    <data>
+        <display>
+        <title>hexo博客其他配置</title>
+        <pubTime>2017-02-01T07:03:25.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="教程" url="http://jmagenif.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jmagenif.github.io/2017/01/31/hello/</loc>
+    <lastmod>2017-02-01T07:22:10.664Z</lastmod>
+    <data>
+        <display>
+        <title>windows下免费用github+hexo搭建个人博客</title>
+        <pubTime>2017-01-31T14:37:23.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="教程" url="http://jmagenif.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
