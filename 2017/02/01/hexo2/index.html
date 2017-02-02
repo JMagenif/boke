@@ -88,35 +88,20 @@
 
 <meta name="description" content="1.安装RSS和sitemap插件npm install hexo-generator-feed --save
 npm install hexo-generator-sitemap --save
-开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml
-feed: 
-
-      type: atom  #feed 类型 
-
-      path: atom.xml  #">
+npm install hexo-generator-baidu-sitemap --save">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客其他配置">
-<meta property="og:url" content="http://jmagenif.github.io/2017/02/01/hexo2/index.html">
+<meta property="og:url" content="http://duwei123.top/2017/02/01/hexo2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1.安装RSS和sitemap插件npm install hexo-generator-feed --save
 npm install hexo-generator-sitemap --save
-开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml
-feed: 
-
-      type: atom  #feed 类型 
-
-      path: atom.xml  #">
-<meta property="og:updated_time" content="2017-02-01T08:06:11.768Z">
+npm install hexo-generator-baidu-sitemap --save">
+<meta property="og:updated_time" content="2017-02-01T13:11:14.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客其他配置">
 <meta name="twitter:description" content="1.安装RSS和sitemap插件npm install hexo-generator-feed --save
 npm install hexo-generator-sitemap --save
-开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml
-feed: 
-
-      type: atom  #feed 类型 
-
-      path: atom.xml  #">
+npm install hexo-generator-baidu-sitemap --save">
 
 
 
@@ -144,7 +129,7 @@ feed:
 
 
 
-  <link rel="canonical" href="http://jmagenif.github.io/2017/02/01/hexo2/"/>
+  <link rel="canonical" href="http://duwei123.top/2017/02/01/hexo2/"/>
 
 
 
@@ -305,12 +290,12 @@ feed:
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://jmagenif.github.io/2017/02/01/hexo2/">
+  <link itemprop="mainEntityOfPage" href="http://duwei123.top/2017/02/01/hexo2/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Terminal">
     <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
+    <meta itemprop="image" content="/images/avatar.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -425,7 +410,9 @@ feed:
       
         <h1 id="1-安装RSS和sitemap插件"><a href="#1-安装RSS和sitemap插件" class="headerlink" title="1.安装RSS和sitemap插件"></a>1.安装RSS和sitemap插件</h1><pre><code>npm install hexo-generator-feed --save
 npm install hexo-generator-sitemap --save
-</code></pre><p>开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml</p>
+npm install hexo-generator-baidu-sitemap --save
+</code></pre><a id="more"></a>
+<p>开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml</p>
 <pre><code>feed: 
 
       type: atom  #feed 类型 
@@ -435,6 +422,14 @@ npm install hexo-generator-sitemap --save
       limit: 20  #在 rss 中最多生成的文章数(0显示所有)
 </code></pre><p>添加主题配置，在主题目录下的_config.yml目录下，添加如下配置</p>
 <pre><code>rss: /atom.xml
+</code></pre><p>hexo 主目录 添加如下内容 不添加也行 </p>
+<pre><code># sitemap
+sitemap:
+      path: sitemap.xml
+baidusitemap:
+      path: baidusitemap.xml
+</code></pre><p>编译一下博客 </p>
+<pre><code>hexo g
 </code></pre>
       
     </div>
@@ -496,7 +491,7 @@ npm install hexo-generator-sitemap --save
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/01/hexo2/"
-           data-title="hexo博客其他配置" data-url="http://jmagenif.github.io/2017/02/01/hexo2/">
+           data-title="hexo博客其他配置" data-url="http://duwei123.top/2017/02/01/hexo2/">
       </div>
     
   </div>
@@ -533,7 +528,7 @@ npm install hexo-generator-sitemap --save
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
+               src="/images/avatar.jpg"
                alt="Terminal" />
           <p class="site-author-name" itemprop="name">Terminal</p>
           <p class="site-description motion-element" itemprop="description"></p>

@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://jmagenif.github.io/"/>
-  <updated>2017-02-01T08:06:11.768Z</updated>
-  <id>http://jmagenif.github.io/</id>
+  <link href="http://duwei123.top/"/>
+  <updated>2017-02-01T13:11:14.186Z</updated>
+  <id>http://duwei123.top/</id>
   
   <author>
     <name>Terminal</name>
@@ -17,14 +17,16 @@
   
   <entry>
     <title>hexo博客其他配置</title>
-    <link href="http://jmagenif.github.io/2017/02/01/hexo2/"/>
-    <id>http://jmagenif.github.io/2017/02/01/hexo2/</id>
+    <link href="http://duwei123.top/2017/02/01/hexo2/"/>
+    <id>http://duwei123.top/2017/02/01/hexo2/</id>
     <published>2017-02-01T07:03:25.000Z</published>
-    <updated>2017-02-01T08:06:11.768Z</updated>
+    <updated>2017-02-01T13:11:14.186Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-安装RSS和sitemap插件"><a href="#1-安装RSS和sitemap插件" class="headerlink" title="1.安装RSS和sitemap插件"></a>1.安装RSS和sitemap插件</h1><pre><code>npm install hexo-generator-feed --save
 npm install hexo-generator-sitemap --save
-</code></pre><p>开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml</p>
+npm install hexo-generator-baidu-sitemap --save
+</code></pre><a id="more"></a>
+<p>开启RSS和sitemap功能，编辑站点配置文件 hexo/_config.yml</p>
 <pre><code>feed: 
 
       type: atom  #feed 类型 
@@ -34,25 +36,36 @@ npm install hexo-generator-sitemap --save
       limit: 20  #在 rss 中最多生成的文章数(0显示所有)
 </code></pre><p>添加主题配置，在主题目录下的_config.yml目录下，添加如下配置</p>
 <pre><code>rss: /atom.xml
+</code></pre><p>hexo 主目录 添加如下内容 不添加也行 </p>
+<pre><code># sitemap
+sitemap:
+      path: sitemap.xml
+baidusitemap:
+      path: baidusitemap.xml
+</code></pre><p>编译一下博客 </p>
+<pre><code>hexo g
 </code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-安装RSS和sitemap插件&quot;&gt;&lt;a href=&quot;#1-安装RSS和sitemap插件&quot; class=&quot;headerlink&quot; title=&quot;1.安装RSS和sitemap插件&quot;&gt;&lt;/a&gt;1.安装RSS和sitemap插件&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;np
+      &lt;h1 id=&quot;1-安装RSS和sitemap插件&quot;&gt;&lt;a href=&quot;#1-安装RSS和sitemap插件&quot; class=&quot;headerlink&quot; title=&quot;1.安装RSS和sitemap插件&quot;&gt;&lt;/a&gt;1.安装RSS和sitemap插件&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;npm install hexo-generator-feed --save
+npm install hexo-generator-sitemap --save
+npm install hexo-generator-baidu-sitemap --save
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
-      <category term="教程" scheme="http://jmagenif.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duwei123.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
   
   <entry>
     <title>windows下免费用github+hexo搭建个人博客</title>
-    <link href="http://jmagenif.github.io/2017/01/31/hello/"/>
-    <id>http://jmagenif.github.io/2017/01/31/hello/</id>
+    <link href="http://duwei123.top/2017/01/31/hello/"/>
+    <id>http://duwei123.top/2017/01/31/hello/</id>
     <published>2017-01-31T14:37:23.000Z</published>
-    <updated>2017-02-01T07:22:10.664Z</updated>
+    <updated>2017-02-01T12:59:31.118Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-windows7-系统"><a href="#1-windows7-系统" class="headerlink" title="1.windows7 系统"></a>1.windows7 系统</h1><h1 id="2-安装Git-官网下载"><a href="#2-安装Git-官网下载" class="headerlink" title="2.安装Git #  官网下载"></a>2.安装Git #  <a href="https://git-scm.com/download/" target="_blank" rel="external">官网下载</a></h1><h1 id="3-安装Node-js-官网下载"><a href="#3-安装Node-js-官网下载" class="headerlink" title="3.安装Node.js #  官网下载"></a>3.安装Node.js #  <a href="https://nodejs.org/en/" target="_blank" rel="external">官网下载</a></h1><a id="more"></a>
 <h1 id="4-验证软件是否正确安装"><a href="#4-验证软件是否正确安装" class="headerlink" title="4.验证软件是否正确安装"></a>4.验证软件是否正确安装</h1><p>打开cmd输入</p>
@@ -100,7 +113,6 @@ type:
 <pre><code>$ hexo d -g
 </code></pre><p>发布时需要输入github的帐号和密码，输入密码时是看不到自己输入的内容的 </p>
 <p>到这步基本就完了,打开222.github.io就可以看到网站了</p>
-<p>看了教程还弄不好的可以扫描二维码头像找博主代搭 价格实惠</p>
 <hr>
 ]]></content>
     
@@ -110,7 +122,7 @@ type:
     
     </summary>
     
-      <category term="教程" scheme="http://jmagenif.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://duwei123.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
